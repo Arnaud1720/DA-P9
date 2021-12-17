@@ -25,7 +25,6 @@ public abstract class ConsumerTestCase {
     public ConsumerTestCase() {
     }
 
-
     // ==================== Getters/Setters ====================
     public static DaoProxy getDaoProxy() {
         return DAO_PROXY;

@@ -18,7 +18,6 @@ public final class SpringRegistry {
      */
     private static final Logger LOGGER = LogManager.getLogger(SpringRegistry.class);
 
-
     /**
      * Instance unique de la classe (design pattern Singleton)
      */

@@ -37,7 +37,6 @@ public class ComptabiliteDaoImplIntegrationTest extends ConsumerTestCase {
         assertThat(ecritureComptableList).isNotEmpty();
 
     }
-
     @Test
     public void getEcritureComptableShouldReturnEcritureComptable() throws NotFoundException {
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");

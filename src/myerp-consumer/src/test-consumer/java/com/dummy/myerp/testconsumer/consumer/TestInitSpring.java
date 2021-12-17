@@ -17,7 +17,6 @@ public class TestInitSpring extends ConsumerTestCase {
         super();
     }
 
-
     /**
      * Teste l'initialisation du contexte Spring
      */

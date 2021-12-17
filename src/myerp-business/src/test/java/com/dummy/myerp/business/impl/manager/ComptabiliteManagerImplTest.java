@@ -53,7 +53,6 @@ public class ComptabiliteManagerImplTest {
                 vLibelle,
                 vDebit, vCredit);
     }
-
     @Before
     public void setUpMockDao() {
         ComptabiliteManagerImpl.configure(businessProxy, daoProxy, transactionManager);

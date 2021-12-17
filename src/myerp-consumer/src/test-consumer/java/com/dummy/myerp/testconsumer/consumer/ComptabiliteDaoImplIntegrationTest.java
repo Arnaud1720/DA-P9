@@ -125,7 +125,7 @@ public class ComptabiliteDaoImplIntegrationTest extends ConsumerTestCase {
 
         List<EcritureComptable> vEcritureComptableList = getDaoProxy().getComptabiliteDao().getListEcritureComptable();
         for (EcritureComptable vEcritureComptable : vEcritureComptableList) {
-            if (vEcritureComptable.getId() == -3) {
+            if (vEcritureComptable.getId() == -5) {
                 vEcritureComptable.setLibelle("EXP");
                 getDaoProxy().getComptabiliteDao().updateEcritureComptable(vEcritureComptable);
                 assertEquals("Mise a jour reussie", "EXP", vEcritureComptable.getLibelle());
@@ -136,7 +136,7 @@ public class ComptabiliteDaoImplIntegrationTest extends ConsumerTestCase {
     @Test
     public void deleteEcritureComptableById() throws NotFoundException {
 
-        EcritureComptable ecritureComptable = getDaoProxy().getComptabiliteDao().getEcritureComptable(-6);
+        EcritureComptable ecritureComptable = getDaoProxy().getComptabiliteDao().getEcritureComptable(-4);
         int initialSizeList = getDaoProxy().getComptabiliteDao().getListEcritureComptable().size();
         getDaoProxy().getComptabiliteDao().deleteEcritureComptable(ecritureComptable.getId());
         int sizeList = getDaoProxy().getComptabiliteDao().getListEcritureComptable().size();
@@ -170,8 +170,8 @@ public class ComptabiliteDaoImplIntegrationTest extends ConsumerTestCase {
 
     @Test
     public void updateSequenceEcritureComptableShouldReturnSequence() throws NotFoundException {
-        SequenceEcritureComptable sequenceInDb = getDaoProxy().getComptabiliteDao().getSequenceEcritureComptable("TE", 2020);
-        SequenceEcritureComptable sequenceEcritureComptable = new SequenceEcritureComptable("TE", 2020, 150);
+        SequenceEcritureComptable sequenceInDb = getDaoProxy().getComptabiliteDao().getSequenceEcritureComptable("TE", 2021);
+        SequenceEcritureComptable sequenceEcritureComptable = new SequenceEcritureComptable("TE", 2021, 150);
         getDaoProxy().getComptabiliteDao().updateSequenceEcritureComptable(sequenceEcritureComptable);
         assertThat(sequenceInDb.getDerniereValeur()).isNotEqualTo(sequenceEcritureComptable.getDerniereValeur());
     }

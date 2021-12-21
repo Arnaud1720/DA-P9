@@ -40,17 +40,17 @@ public class ComptabiliteDaoImplIntegrationTest extends ConsumerTestCase {
     @Test
     public void getEcritureComptableShouldReturnEcritureComptable() throws NotFoundException {
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-        String dateStringTest = "2016-12-30";
+        String dateStringTest = "2016-12-31";
 
         EcritureComptable ecritureComptable;
         try {
-            ecritureComptable = getDaoProxy().getComptabiliteDao().getEcritureComptable(-2);
+            ecritureComptable = getDaoProxy().getComptabiliteDao().getEcritureComptable(-1);
             assertThat(ecritureComptable).isNotNull();
-            assertThat(ecritureComptable.getReference()).isEqualTo("VE-2016/00002");
-            assertThat(ecritureComptable.getJournal().getCode()).isEqualTo("VE");
+            assertThat(ecritureComptable.getReference()).isEqualTo("AC-2016/00001");
+            assertThat(ecritureComptable.getJournal().getCode()).isEqualTo("AC");
             Date dateTest = formatter.parse(dateStringTest);
             assertThat(ecritureComptable.getDate()).isEqualTo(dateTest);
-            assertThat(ecritureComptable.getLibelle()).isEqualTo("TMA Appli Xxx");
+            assertThat(ecritureComptable.getLibelle()).isEqualTo("Cartouches d’imprimante");
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -66,17 +66,17 @@ public class ComptabiliteDaoImplIntegrationTest extends ConsumerTestCase {
     public void getEcritureComptableByRefShouldReturnEcritureComptable() throws NotFoundException {
 
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-        String dateStringTest = "2016-12-30";
+        String dateStringTest = "2016-12-31";
 
         EcritureComptable ecritureComptable;
         try {
-            ecritureComptable = getDaoProxy().getComptabiliteDao().getEcritureComptableByRef("VE-2016/00002");
+            ecritureComptable = getDaoProxy().getComptabiliteDao().getEcritureComptableByRef("AC-2016/00001");
             assertThat(ecritureComptable).isNotNull();
-            assertThat(ecritureComptable.getId()).isEqualTo(-2);
-            assertThat(ecritureComptable.getJournal().getCode()).isEqualTo("VE");
+            assertThat(ecritureComptable.getId()).isEqualTo(-1);
+            assertThat(ecritureComptable.getJournal().getCode()).isEqualTo("AC");
             Date dateTest = formatter.parse(dateStringTest);
             assertThat(ecritureComptable.getDate()).isEqualTo(dateTest);
-            assertThat(ecritureComptable.getLibelle()).isEqualTo("TMA Appli Xxx");
+            assertThat(ecritureComptable.getLibelle()).isEqualTo("Cartouches d’imprimante");
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -135,7 +135,7 @@ public class ComptabiliteDaoImplIntegrationTest extends ConsumerTestCase {
     @Test
     public void deleteEcritureComptableById() throws NotFoundException {
 
-        EcritureComptable ecritureComptable = getDaoProxy().getComptabiliteDao().getEcritureComptable(-2);
+        EcritureComptable ecritureComptable = getDaoProxy().getComptabiliteDao().getEcritureComptable(-4);
         int initialSizeList = getDaoProxy().getComptabiliteDao().getListEcritureComptable().size();
         getDaoProxy().getComptabiliteDao().deleteEcritureComptable(ecritureComptable.getId());
         int sizeList = getDaoProxy().getComptabiliteDao().getListEcritureComptable().size();

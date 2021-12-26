@@ -119,7 +119,7 @@ public class ComptabiliteManagerImplIntegrationTest extends BusinessTestCase {
                 null));
         vEcritureComptable.getListLigneEcriture().add(new LigneEcritureComptable(new CompteComptable(706),
                 null, null,
-                new BigDecimal(123)));
+                new BigDecimal( 123)));
         comptabiliteManager.insertEcritureComptable(vEcritureComptable);
     }
 

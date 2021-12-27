@@ -201,11 +201,11 @@ public class ComptabiliteManagerImplTest {
         Integer ecritureYear = calendar.get(Calendar.YEAR);
         String journalCode = "AC";
 
-        when(comptabiliteDao.getSequenceEcritureComptable(journalCode, ecritureYear)).thenReturn(new SequenceEcritureComptable(journalCode, ecritureYear, 8));
+        when(comptabiliteDao.getSequenceEcritureComptable(journalCode, ecritureYear)).thenReturn(new SequenceEcritureComptable(journalCode, ecritureYear, 7));
 
         manager.addReference(vEcritureComptable);
-
-        assertEquals("AC-2021/00009", vEcritureComptable.getReference());
+        // retour vérifie derniereVal+1
+        assertEquals("AC-2021/00008", vEcritureComptable.getReference());
     }
 
 

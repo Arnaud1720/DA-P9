@@ -109,8 +109,9 @@ public class EcritureComptable {
      * Renvoie si l'écriture est équilibrée (TotalDebit = TotalCrédit)
      * @return boolean
      */
+
     public boolean isEquilibree() {
-        // On compare des BigDecimal. On utilise compareTo
+        // On compare des BigDecimal. On utilise compareTo et non equals
         return this.getTotalDebit().compareTo(getTotalCredit()) == 0;
     }
 

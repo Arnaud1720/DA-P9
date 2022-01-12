@@ -65,7 +65,7 @@ public class ComptabiliteManagerImplTest {
         vEcritureComptable.setJournal(new JournalComptable("AC", "Achat"));
         vEcritureComptable.setDate(new Date());
         vEcritureComptable.setLibelle("Libelle");
-        vEcritureComptable.setReference("AC-2021/00001");
+        vEcritureComptable.setReference("AC-2022/00001");
         vEcritureComptable.getListLigneEcriture().add(new LigneEcritureComptable(new CompteComptable(1),
                 null, new BigDecimal(123),
                 null));
@@ -205,7 +205,7 @@ public class ComptabiliteManagerImplTest {
 
         manager.addReference(vEcritureComptable);
         // retour vérifie derniereVal+1
-        assertEquals("AC-2021/00008", vEcritureComptable.getReference());
+        assertEquals("AC-2022/00008", vEcritureComptable.getReference());
     }
 
 
@@ -230,7 +230,7 @@ public class ComptabiliteManagerImplTest {
 
         manager.addReference(vEcritureComptable);
 
-        assertEquals("AC-2021/00001", vEcritureComptable.getReference());
+        assertEquals("AC-2022/00001", vEcritureComptable.getReference());
     }
 
     @Test
@@ -279,7 +279,7 @@ public class ComptabiliteManagerImplTest {
         vEcritureComptable.setJournal(new JournalComptable("AC", "Achat"));
         vEcritureComptable.setDate(new Date());
         vEcritureComptable.setLibelle("Libelle");
-        vEcritureComptable.setReference("AC-2021/00001");
+        vEcritureComptable.setReference("AC-2022/00001");
         vEcritureComptable.getListLigneEcriture().add(this.createLigne(1, "200.50", null));
         vEcritureComptable.getListLigneEcriture().add(this.createLigne(1, "100.50", "33"));
         vEcritureComptable.getListLigneEcriture().add(this.createLigne(2, null, "301"));

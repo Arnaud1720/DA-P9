@@ -67,7 +67,7 @@ public class ComptabiliteManagerImplIntegrationTest extends BusinessTestCase {
     public void checkInsertEcritureComptableReturnNoError() throws FunctionalException {
         EcritureComptable vEcritureComptable = new EcritureComptable();
         vEcritureComptable.setJournal(new JournalComptable("VE", "Vente"));
-        vEcritureComptable.setReference("VE-2021/00006");
+        vEcritureComptable.setReference("VE-2022/00006");
         vEcritureComptable.setDate(new Date());
         vEcritureComptable.setLibelle("Test integration vente");
         vEcritureComptable.getListLigneEcriture().add(new LigneEcritureComptable(new CompteComptable(411),

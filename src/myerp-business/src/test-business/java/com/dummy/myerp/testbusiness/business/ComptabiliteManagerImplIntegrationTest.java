@@ -39,7 +39,10 @@ public class ComptabiliteManagerImplIntegrationTest extends BusinessTestCase {
         Assertions.assertThat(journalComptableList).isNotEmpty();
     }
 
-
+    /**
+     * 
+     * @throws FunctionalException
+     */
 
     @Test
     public void checkEcritureComptable() throws FunctionalException {

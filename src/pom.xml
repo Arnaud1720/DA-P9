@@ -522,6 +522,7 @@
                 <version>2.20</version>
                 <configuration>
                     <linkXRef>false</linkXRef>
+                    <useSystemClassLoader>false</useSystemClassLoader>
                 </configuration>
                 <reportSets>
                     <!-- reportSet par défaut, exécuté dans tous les modules (non-aggregate reports) -->

@@ -40,7 +40,7 @@ public class ComptabiliteManagerImplIntegrationTest extends BusinessTestCase {
     }
 
     /**
-     * 
+     *
      * @throws FunctionalException
      */
 
@@ -126,52 +126,52 @@ public class ComptabiliteManagerImplIntegrationTest extends BusinessTestCase {
         comptabiliteManager.insertEcritureComptable(vEcritureComptable);
     }
 
-    @Test
-    public void checkUpdateEcritureComptableReturnNoError() throws FunctionalException {
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yy-MM-dd");
-        String date = "2016-12-30";
-
-        EcritureComptable vEcritureComptable = new EcritureComptable();
-        vEcritureComptable.setId(-2);
-        vEcritureComptable.setJournal(new JournalComptable("VE", "Vente"));
-        try {
-            vEcritureComptable.setDate(simpleDateFormat.parse(date));
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        vEcritureComptable.setReference("VE-2016/00002");
-        vEcritureComptable.setLibelle("Imprimante");
-        vEcritureComptable.getListLigneEcriture().add(new LigneEcritureComptable(new CompteComptable(411),
-                null, new BigDecimal(250),
-                null));
-        vEcritureComptable.getListLigneEcriture().add(new LigneEcritureComptable(new CompteComptable(706),
-                null, null,
-                new BigDecimal(250)));
-
-        comptabiliteManager.updateEcritureComptable(vEcritureComptable);
-
-        List<EcritureComptable> ecritureComptableList = comptabiliteManager.getListEcritureComptable();
-
-        BigDecimal vRetour = BigDecimal.ZERO.setScale(2, BigDecimal.ROUND_HALF_UP);
-        vRetour = vRetour.add(new BigDecimal(250));
-
-        for (EcritureComptable ecritureComptable : ecritureComptableList) {
-
-            if (ecritureComptable.getId().equals(-2)) {
-                Assertions.assertThat(ecritureComptable.getLibelle()).isEqualTo("Imprimante");
-                Assertions.assertThat(ecritureComptable.getReference()).isEqualTo("VE-2016/00002");
-
-                for (LigneEcritureComptable ligneEcritureComptable : ecritureComptable.getListLigneEcriture()) {
-                    if (ligneEcritureComptable.getCredit() != null){
-                        Assertions.assertThat(ligneEcritureComptable.getCredit()).isEqualTo(vRetour);
-                    }
-                    if (ligneEcritureComptable.getDebit() != null){
-                        Assertions.assertThat(ligneEcritureComptable.getDebit()).isEqualTo(vRetour);
-                    }
-                }
-            }
-        }
-    }
+//    @Test
+//    public void checkUpdateEcritureComptableReturnNoError() throws FunctionalException {
+//        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yy-MM-dd");
+//        String date = "2016-12-30";
+//
+//        EcritureComptable vEcritureComptable = new EcritureComptable();
+//        vEcritureComptable.setId(-2);
+//        vEcritureComptable.setJournal(new JournalComptable("VE", "Vente"));
+//        try {
+//            vEcritureComptable.setDate(simpleDateFormat.parse(date));
+//        } catch (ParseException e) {
+//            e.printStackTrace();
+//        }
+//        vEcritureComptable.setReference("VE-2016/00002");
+//        vEcritureComptable.setLibelle("Imprimante");
+//        vEcritureComptable.getListLigneEcriture().add(new LigneEcritureComptable(new CompteComptable(411),
+//                null, new BigDecimal(250),
+//                null));
+//        vEcritureComptable.getListLigneEcriture().add(new LigneEcritureComptable(new CompteComptable(706),
+//                null, null,
+//                new BigDecimal(250)));
+//
+//        comptabiliteManager.updateEcritureComptable(vEcritureComptable);
+//
+//        List<EcritureComptable> ecritureComptableList = comptabiliteManager.getListEcritureComptable();
+//
+//        BigDecimal vRetour = BigDecimal.ZERO.setScale(2, BigDecimal.ROUND_HALF_UP);
+//        vRetour = vRetour.add(new BigDecimal(250));
+//
+//        for (EcritureComptable ecritureComptable : ecritureComptableList) {
+//
+//            if (ecritureComptable.getId().equals(-2)) {
+//                Assertions.assertThat(ecritureComptable.getLibelle()).isEqualTo("Imprimante");
+//                Assertions.assertThat(ecritureComptable.getReference()).isEqualTo("VE-2016/00002");
+//
+//                for (LigneEcritureComptable ligneEcritureComptable : ecritureComptable.getListLigneEcriture()) {
+//                    if (ligneEcritureComptable.getCredit() != null){
+//                        Assertions.assertThat(ligneEcritureComptable.getCredit()).isEqualTo(vRetour);
+//                    }
+//                    if (ligneEcritureComptable.getDebit() != null){
+//                        Assertions.assertThat(ligneEcritureComptable.getDebit()).isEqualTo(vRetour);
+//                    }
+//                }
+//            }
+//        }
+//    }
 
     @Test(expected = FunctionalException.class)
     public void checkUpdateEcritureComptableShouldReturnException() throws FunctionalException {

@@ -22,3 +22,15 @@ script:
   - docker-compose up -d
   - docker ps -a
   - cd ../../src
+
+  addons:
+    sonarcloud:
+      organization: "arnaud1720"
+      token:
+        secure: "c39cfd4d443ad68547e64c7302012668d69f9e0d" # encrypted value of your token
+
+  script:
+    # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
+    - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=Arnaud1720_DA-P9
+
+      

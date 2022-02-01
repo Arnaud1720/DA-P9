@@ -55,8 +55,7 @@
         <spring.version>4.3.7.RELEASE</spring.version>
 
         <!-- ===== Sonar Cloud properties ===== -->
-        <sonar.projectKey>Kamika-ZE_TEST_OC_P9</sonar.projectKey>
-        <sonar.organization>kamika-ze</sonar.organization>
+        <sonar.organization>arnaud1720</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
         <sonar.login>d8835cba94cdb9f3049144cdf375a880ea0f87bd</sonar.login>
         <sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
@@ -64,8 +63,6 @@
         <sonar.moduleKey>${project.artifactId}</sonar.moduleKey>
         <!--<sonar.branch.name>develop</sonar.branch.name>-->
         <aggregate.report.dir>myerp-report/target/site/jacoco-aggregate/jacoco.xml</aggregate.report.dir>
-
-
     </properties>
 
 

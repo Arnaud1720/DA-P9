@@ -9,6 +9,11 @@
     <remote-repository>
       <option name="id" value="project.local" />
       <option name="name" value="project.local" />
+      <option name="url" value="file://C:\Users\deris\Desktop\DA-P9\src/../src/lib/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="project.local" />
+      <option name="name" value="project.local" />
       <option name="url" value="file://C:\Users\deris\Desktop\DERISBOURG Arnaud P-9\src\myerp-business/../src/lib/" />
     </remote-repository>
     <remote-repository>
@@ -27,9 +32,19 @@
       <option name="url" value="file://C:\Users\deris\Desktop\DERISBOURG Arnaud P-9\src\myerp-consumer/../src/lib/" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="project.local" />
+      <option name="name" value="project.local" />
+      <option name="url" value="file://C:\Users\deris\Desktop\DA-P9\src\myerp-model/../src/lib/" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="central" />
       <option name="name" value="Maven Central repository" />
       <option name="url" value="https://repo1.maven.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="project.local" />
+      <option name="name" value="project.local" />
+      <option name="url" value="file://C:\Users\deris\Desktop\DA-P9\src\myerp-business/../src/lib/" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="project.local" />
@@ -45,6 +60,16 @@
       <option name="id" value="project.local" />
       <option name="name" value="project.local" />
       <option name="url" value="file://D:\Projets\IdeaProjects\TEST_OC_P9\src/../src/lib/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="project.local" />
+      <option name="name" value="project.local" />
+      <option name="url" value="file://C:\Users\deris\Desktop\DA-P9\src\myerp-report/../src/lib/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="project.local" />
+      <option name="name" value="project.local" />
+      <option name="url" value="file://C:\Users\deris\Desktop\DA-P9\src\myerp-consumer/../src/lib/" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="project.local" />
@@ -75,6 +100,11 @@
       <option name="id" value="project.local" />
       <option name="name" value="project.local" />
       <option name="url" value="file://D:\Projets\IdeaProjects\TEST_OC_P9\src\myerp-report/../src/lib/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="project.local" />
+      <option name="name" value="project.local" />
+      <option name="url" value="file://C:\Users\deris\Desktop\DA-P9\src\myerp-technical/../src/lib/" />
     </remote-repository>
   </component>
 </project>

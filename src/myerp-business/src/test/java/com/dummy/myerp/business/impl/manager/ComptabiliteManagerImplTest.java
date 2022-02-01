@@ -1,5 +1,6 @@
 package com.dummy.myerp.business.impl.manager;
 
+
 import com.dummy.myerp.business.contrat.BusinessProxy;
 import com.dummy.myerp.business.impl.TransactionManager;
 import com.dummy.myerp.consumer.dao.contrat.ComptabiliteDao;
